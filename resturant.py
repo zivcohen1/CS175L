@@ -1,10 +1,33 @@
 #CS175
 #Ziv Cohen
 #resturant
+print("please answer only by enter yes or no")
 while True:
-    vegetarian=input("Is anyone in your party vegetarian? (Please answer by yes/no)").lower()
-    vegan=input("Is anyone in your party vegan? ").lower()
-    gluten=input("Is anyone in your party gluten-free? ").lower()
+    var=True
+    while var:
+     
+        vegetarian=input("Is anyone in your party vegetarian?").lower()
+        if vegetarian == "yes" or vegetarian == "no":
+            var=False
+        else:
+           print("Invalid input. please enter yes or no only!")
+           
+    var = True
+    while var:
+        vegan=input("Is anyone in your party vegan? ").lower()
+        if vegan == "yes" or vegan == "no":
+            var = False
+        else:
+             print("Invalid input. please enter yes or no only!")
+
+    var = True        
+    while var:
+         gluten=input("Is anyone in your party gluten-free? ").lower()
+         if gluten == "yes" or gluten == "no":
+             var = False
+         else:
+              print("Invalid input. please enter yes or no only!")
+    
     if vegetarian=="yes" and vegan=="no" and gluten=="no":
      print("Here are your resturant choices. \n"
            "Mama's Fine italin\n"
