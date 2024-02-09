@@ -2,7 +2,8 @@
 #Ziv Cohen
 #resturant
 print("please answer only by enter yes or no")
-while True:
+run=True
+while run:
     var=True
     while var:
      
@@ -51,7 +52,10 @@ while True:
          print("Here are your resturant choices. \n"
                "Corner Cafe\n"
                "The Chef's Kitchen")
+         
     another_round=input("Would you like to enter diffrenet preferences? (yes/no)").lower()
-    if another_round!="yes":
+    if another_round != "yes":
         print("Goodbye!")
-        break 
+        run = False
+     
+     
