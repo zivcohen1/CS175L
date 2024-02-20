@@ -1,4 +1,4 @@
-#cs175
+
 #CS175
 #Ziv Cohen
 #stop sign
