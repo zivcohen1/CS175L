@@ -1,6 +1,7 @@
-#Temperature conversions with functions
+
 #CS175
 #Ziv Cohen
+#Temperature conversions with functions
 
 def main():
     controlLoop()
