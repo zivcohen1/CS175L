@@ -1,3 +1,8 @@
+#CS175
+#Ziv Cohen
+#AverageFromInput
+
+
 def main():
    
     total , count = get_values()
