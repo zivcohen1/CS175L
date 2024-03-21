@@ -1,26 +1,33 @@
-#AverageFromInput
-#Ziv Cohen
-#CS175L
 def main():
+   
+    total , count = get_values()
+    avg = average(total,count)
+    print(f'Average: {avg:.1f}')
+def get_values():
     total = 0
     count = 0
-    infile = open(r"C:\Users\zivco\OneDrive\Desktop\numbers.txt", 'r')
-    for line in infile:
-        num = int(line)
-        total += num 
-        count += 1
+    try:
+        with open(r"C:\Users\zivco\OneDrive\Desktop\numbers.txt", 'r') as infile:
+            for line in infile:
+                try:
+                    num = float(line)
+                    total += num 
+                    count += 1
+                    print (f'I read in {count} number(s), current number is: {num:>8.2f}, Total is: {total:>8.2f}')
+                except ValueError:
+                    print(f'Bad data: {line.strip()} skipping')
+        return total, count 
         
-        print (f'I read in {count} numbers(s) current number is: {num:>8.2f}  Total is:     {total:>8.2f}')
 
-    average = total / count
-    print(f'Average: {average:.1f}')
-
-    
-    infile.close()
-
+                    
+    except IOError:
+        print("SystemExit: File not found: numbers.txt - exiting")
+        return 
+def average(total, count):
+    avg = total / count
+    return avg
     
     
 
 if __name__ == '__main__':
     main()
-    
