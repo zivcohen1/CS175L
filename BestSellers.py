@@ -11,7 +11,7 @@ def get_values():
         
          if filepath == 'End'.lower():
                  print('Ending program without opening the file')
-                 quit()
+                 exit()
          else:
                  with open(filepath, 'r') as infile:
                     for line in infile:
@@ -121,6 +121,7 @@ def quit():
 
 def main():
     books = get_values()
+    print('Read 1138 books')
     menu(books)
             
 
@@ -131,7 +132,6 @@ def main():
 
 
 if __name__ == '__main__':
-    print('Read 1138 books')
     main()
     
     
